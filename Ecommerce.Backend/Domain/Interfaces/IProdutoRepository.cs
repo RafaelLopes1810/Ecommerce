@@ -5,9 +5,9 @@ namespace Ecommerce.Backend.Domain.Interfaces
     public interface IProdutoRepository
     {
         IEnumerable<Produto> GetAll();
-        Produto? GetById(int id);
+        Produto? GetById(Guid id);
         void Add(Produto produto);
         void Update(Produto produto);
-        void Delete(int id);
+        void Delete(Guid id);
     }
 }
