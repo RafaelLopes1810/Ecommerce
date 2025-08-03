@@ -19,7 +19,7 @@ namespace SeuProjeto.Infrastructure.Repositories
             return _context.Produtos.ToList();
         }
 
-        public Produto? GetById(int id)
+        public Produto? GetById(Guid id)
         {
             return _context.Produtos.Find(id);
         }
@@ -36,7 +36,7 @@ namespace SeuProjeto.Infrastructure.Repositories
             _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
             var produto = _context.Produtos.Find(id);
             if (produto != null)
