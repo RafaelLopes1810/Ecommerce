@@ -3,7 +3,7 @@ using Ecommerce.Backend.Domain.Entities;
 using Ecommerce.Backend.Domain.Interfaces;
 using Ecommerce.Backend.Infrastructure.Persistence;
 
-namespace SeuProjeto.Infrastructure.Repositories
+namespace Ecommerce.Backend.Infrastructure.Repositories
 {
     public class ProdutoRepository : IProdutoRepository
     {

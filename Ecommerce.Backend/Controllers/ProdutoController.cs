@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Ecommerce.Backend.Domain.Interfaces;
 using Ecommerce.Backend.Domain.Entities;
 
-namespace SeuProjeto.WebApi.Controllers
+namespace Ecommerce.Backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

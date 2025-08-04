@@ -1,7 +1,14 @@
 using Ecommerce.Backend.Infrastructure.Persistence;
+using Ecommerce.Backend.Domain.Interfaces;
+using Ecommerce.Backend.Application.Services;
+using Ecommerce.Backend.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Adiciona services e repositórios
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 // Conexão com o banco de dados
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
