@@ -13,6 +13,8 @@ public class Produto
     public decimal Preco { get; private set; }
     public int Estoque { get; private set; }
 
+    // EF Core precisa de um construtor vazio (opcionalmente, pode ser protected)
+    protected Produto() { }
     public Produto(string nome, string descricao, decimal preco, int estoque)
     {
         Nome = nome;
@@ -34,6 +36,4 @@ public class Produto
         Estoque += quantidade;
     }
 
-    // EF Core precisa de um construtor vazio (opcionalmente, pode ser protected)
-    protected Produto() { }
 }
