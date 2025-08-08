@@ -17,7 +17,7 @@ namespace Ecommerce.Backend.Application.Services
             return _produtoRepository.GetAll();
         }
 
-        public Produto? ObterPorId(Guid id)
+        public Produto? ObterPorId(int id)
         {
             return _produtoRepository.GetById(id);
         }
@@ -32,7 +32,7 @@ namespace Ecommerce.Backend.Application.Services
             _produtoRepository.Update(produto);
         }
 
-        public void Remover(Guid id)
+        public void Remover(int id)
         {
             _produtoRepository.Delete(id);
         }

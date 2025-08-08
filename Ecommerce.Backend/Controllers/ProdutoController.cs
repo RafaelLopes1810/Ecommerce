@@ -25,7 +25,7 @@ namespace Ecommerce.Backend.Controllers
 
         // GET: api/produto/5
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id)
+        public IActionResult Get(int id)
         {
             var produto = _produtoService.ObterPorId(id);
             if (produto == null)
@@ -47,7 +47,7 @@ namespace Ecommerce.Backend.Controllers
 
         // PUT: api/produto/5
         [HttpPut("{id}")]
-        public IActionResult Put(Guid id, [FromBody] Produto produto)
+        public IActionResult Put(int id, [FromBody] Produto produto)
         {
             if (id != produto.Id)
                 return BadRequest("ID do produto não confere.");
@@ -58,7 +58,7 @@ namespace Ecommerce.Backend.Controllers
 
         // DELETE: api/produto/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(Guid id)
+        public IActionResult Delete(int id)
         {
             var produto = _produtoService.ObterPorId(id);
             if (produto == null)

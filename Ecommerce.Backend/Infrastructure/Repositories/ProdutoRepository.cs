@@ -19,7 +19,7 @@ namespace Ecommerce.Backend.Infrastructure.Repositories
             return _context.Produtos.ToList();
         }
 
-        public Produto? GetById(Guid id)
+        public Produto? GetById(int id)
         {
             return _context.Produtos.Find(id);
         }
@@ -36,7 +36,7 @@ namespace Ecommerce.Backend.Infrastructure.Repositories
             _context.SaveChanges();
         }
 
-        public void Delete(Guid id)
+        public void Delete(int id)
         {
             var produto = _context.Produtos.Find(id);
             if (produto != null)
